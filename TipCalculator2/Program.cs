@@ -18,9 +18,9 @@
 
 using System;
 
-namespace TipCalculator2
+namespace TipCalculator
 {
-    class TipCalculator2Program
+    class TipCalculatorProgram
     {
         static void Main()
         {
@@ -74,7 +74,11 @@ namespace TipCalculator2
             Console.ReadKey();
         }
 
-        // Method captures the Percentage Amount
+        /// <summary>
+        /// Method captures the Percentage Amount
+        /// </summary>
+        /// <returns>Valid Percentage Amount</returns>
+        /// 
         private static double perAmt()
         {
             // Variable for Percentage Amount
@@ -110,7 +114,11 @@ namespace TipCalculator2
             return percent;
         }
 
-        // Method captures the Bill Amount, before taxes and validates proper input
+        /// <summary>
+        /// Method captures the Bill Amount, before taxes and validates proper input
+        /// </summary>
+        /// <returns>Valid Bill Amount</returns>
+        /// 
         static double billAmt()
         {
             // Variable for Bill Amount, before taxes
@@ -146,25 +154,38 @@ namespace TipCalculator2
 
             return total;
         }
-
+        /// <summary>
+        /// Method Calculates Tip Amount and Total Amount to Pay
+        /// </summary>
+        /// <param name="total">Total Bill Amount</param>
+        /// <param name="percent">Tip Percent</param>
+        /// <param name="percent2">Tip Percent 2</param>
+        /// <param name="percent3">Tip Percent 3</param>
+        /// <param name="tip">Tip Amount</param>
+        /// <param name="tip2">Tip Amount 2</param>
+        /// <param name="tip3">Tip Amount 3</param>
+        /// <param name="pay">Pay Amount</param>
+        /// <param name="pay2">Pay Amount 2</param>
+        /// <param name="pay3">Pay Amount 3</param>
+        /// 
         static void amtPay(double total, double percent, double percent2, double percent3, out double tip, out double tip2, out double tip3, out double pay, out double pay2, out double pay3)
         {
-            // Calculate the Tip Amount 1
+            // Calculate the Tip Amount
             tip = total * percent;
 
-            // Calculate the Tip Amount 1
+            // Calculate the Tip Amount 2
             tip2 = total * percent2;
 
-            // Calculate the Tip Amount 2
+            // Calculate the Tip Amount 3
             tip3 = total * percent3;
 
-            // Calculate the Total Amount to Pay 1, including Tip
+            // Calculate the Total Amount to Pay, including Tip
             pay = total + tip;
 
-            // Calculate the Total Amount to Pay 1, including Tip
+            // Calculate the Total Amount to Pay 2, including Tip
             pay2 = total + tip2;
 
-            // Calculate the Total Amount to Pay 2, including Tip
+            // Calculate the Total Amount to Pay 3, including Tip
             pay3 = total + tip3;
         }
 
